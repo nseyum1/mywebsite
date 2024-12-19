@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Personal portfolio of a CS student showcasing programming languages and projects."/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+</head>
+<body>
+<!-- Navigation -->
+<header>
+  <nav>
+    <div class="logo">MyPortfolio</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Hello!, My name is Naol Seyum.</h1>
+    <p>Computer Science Major and Minor in International Business | Aspiring Software Engineer</p>
+    <a class="btn" href="#projects">View My Work</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <img src="img/My_profile_pic.jpeg" alt="Profile Picture" class="profile-pic">
+
+
+    <div class="about-text">
+      <p>
+        I’m a Computer Science student currently pursuing my undergraduate degree. With a strong foundation in programming, I’ve explored various domains including systems programming, data science, and web development.
+      </p>
+      <p>
+        Originally from Addis Ababa, Ethiopia, I came to the United States on a High School scholarship, which opened the door for me to continue my education here. I am currently studying Computer Science at Georgia State University, where I’m able to increase my understanding of programing and work towards my career goals.
+      </p>
+      <p>
+        I’m looking for internship opportunities where I can apply my skills in real-world scenarios and grow as a developer.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <!-- HTML Skill Card -->
+    <div class="skill-card">
+      <h3>HTML</h3>
+      <p>Proficient in semantic HTML, structuring web pages, and working with responsive layouts.</p>
+      <details>
+        <summary>View Examples</summary>
+        <ul>
+          <li>
+            <strong>Portfolio Website:</strong> Built a personal portfolio using semantic HTML5 elements for better SEO and accessibility.
+          </li>
+          <li>
+            <strong>Landing Page:</strong> Created a simple landing page with proper headings, paragraphs, lists, and image embedding.
+          </li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Java Skill Card -->
+    <!-- Java Skill Card -->
+    <div class="skill-card">
+      <h3>Java</h3>
+      <p>Experience with object-oriented programming (OOP), fundamental data structures, and introductory Android development techniques.</p>
+      <details>
+        <summary>View Projects & Code Snippets</summary>
+        <ul>
+          <li>
+            <strong>Automobile Inheritance Example:</strong> Demonstrates the principles of object-oriented programming, including inheritance, encapsulation, and method overriding.
+            <pre><code>
+public class Automobile {
+    private String make;
+    private String model;
+    private int year;
+    private int numWheels;
+
+    public Automobile() {
+        make = "Nissan";
+        model = "Altima";
+        year = 2013;
+        numWheels = 4;
+    }
+
+    public Automobile(String mk, String md, int y, int nw) {
+        make = mk;
+        model = md;
+        year = y;
+        numWheels = nw;
+    }
+
+    public String getMake() { return make; }
+    public String getModel() { return model; }
+    public int getYear() { return year; }
+    public int getNumWheels() { return numWheels; }
+
+    public void getinfo() {
+        System.out.println("\nThe programmer is: Dr. Johnson\n");
+        System.out.println("\tMake: "+make);
+        System.out.println("\tModel: "+model);
+        System.out.println("\tYear: "+year);
+        System.out.println("\tNumber of Wheels: "+numWheels);
+    }
+}
+
+public class SUV extends Automobile {
+    private int numpass;
+    private double cargospc;
+
+    public SUV() {
+        super("Honda", "Civic", 2017, 4);
+        numpass = 4;
+        cargospc = 2;
+    }
+
+    public SUV(String mk, String md, int y, int nw, int np, double csp) {
+        super("Honda", "Civic", 2017, 4);
+        numpass = np;
+        cargospc = csp;
+    }
+
+    @Override
+    public void getinfo() {
+        System.out.println("\nThe programmer is: Dr. Johnson\n");
+        System.out.println("\tMake: "+getMake());
+        System.out.println("\tModel: "+getModel());
+        System.out.println("\tYear: "+getYear());
+        System.out.println("\tNumber of Wheels: "+getNumWheels());
+        System.out.println("\tNumber of Passengers: "+numpass);
+        System.out.println("\tCargo Space: "+cargospc);
+    }
+}
+
+public class Lab1pm {
+    public static void main(String[] args) {
+        Automobile a = new Automobile("Porsche", "911 ST", 2023, 4);
+        SUV s = new SUV("Subaru", "Outback", 2022, 4, 5, 6.7);
+
+        a.getinfo();
+        s.getinfo();
+    }
+}
+        </code></pre>
+          </li>
+        </ul>
+      </details>
+    </div>
+
+    <!-- Python Skill Card -->
+    <div class="skill-card">
+      <h3>Python</h3>
+      <p>
+        Familiar with essential Python programming concepts, including fundamental problem-solving, algorithm development, data types, operators, control structures, file handling, arrays, procedural abstraction, and basic software design.
+      </p>
+      <details>
+        <summary>View Projects & Code Snippets</summary>
+        <ul>
+          <li>
+            <strong>Monte Carlo Integration:</strong> Implemented numerical integration using random sampling to estimate integrals of complex functions.
+            <pre><code>
+import numpy as np
+import math
+
+def func_a(x):
+    if x == 0:
+        return 0
+    return math.sin(1.0 / x)
+
+def func_b(x):
+    return math.exp(-x ** 2)
+
+def monte_carlo(func, lower, upper, n):
+    samples = np.random.uniform(lower, upper, n)
+    result = np.mean([func(x) for x in samples])
+    return (upper - lower) * result
+
+if __name__ == "__main__":
+    n = 1000000  # Number of samples
+
+    # Part (a): ∫_0^1 sin(1/x) dx
+    result_a = monte_carlo(func_a, 0.0001, 1.0, n)  # Avoid 0 due to singularity
+    print(f"A. Estimated value of ∫_0^1 sin(1/x) dx: {result_a:.6f}")
+
+    # Part (b): ∫_{-2}^2 e^(-x^2) dx
+    result_b = monte_carlo(func_b, -2.0, 2.0, n)
+    print(f"B. Estimated value of ∫_{{-2}}^2 e^(-x^2) dx: {result_b:.6f}")
+        </code></pre>
+          </li>
+          <li>
+            <strong>Virus Spread Simulation:</strong> Modeled the spread of a virus through a network of computers using probabilistic infection and removal processes.
+            <pre><code>
+import numpy as np
+import random
+
+def simulate_virus_spread(num_computers=20, prob_spread=0.1, max_infected_removed=5, num_simulations=10000):
+    total_days = 0
+    total_computers_infected = 0
+    times_computer_infected = [0] * num_computers
+
+    for _ in range(num_simulations):
+        infected = [0] * num_computers
+        ever_infected = [0] * num_computers
+        infected[0] = 1
+        ever_infected[0] = 1
+        day_count = 0
+        num_infected_computers = 1
+
+        while num_infected_computers > 0:
+            day_count += 1
+            new_infections = [0] * num_computers
+
+            for i in range(num_computers):
+                if infected[i]:
+                    for j in range(num_computers):
+                        if not infected[j] and random.random() < prob_spread:
+                            new_infections[j] = 1
+                            ever_infected[j] = 1
+
+            for i in range(num_computers):
+                if new_infections[i]:
+                    infected[i] = 1
+
+            indices_infected = [i for i in range(num_computers) if infected[i]]
+            num_to_remove = min(len(indices_infected), max_infected_removed)
+            for _ in range(num_to_remove):
+                idx = random.choice(indices_infected)
+                infected[idx] = 0
+                indices_infected.remove(idx)
+
+            num_infected_computers = sum(infected)
+
+        total_days += day_count
+        total_computers_infected += sum(ever_infected)
+        for i in range(num_computers):
+            if ever_infected[i]:
+                times_computer_infected[i] += 1
+
+    expected_time = total_days / num_simulations
+    expected_num_computers_infected = total_computers_infected / num_simulations
+
+    print(f"(a) Expected time to remove the virus from the whole network: {expected_time:.4f} days")
+    print("(b) Probability that each computer gets infected at least once:")
+    for i in range(num_computers):
+        prob = times_computer_infected[i] / num_simulations
+        print(f"Computer {i + 1}: {prob:.4f}")
+    print(f"(c) Expected number of computers that get infected: {expected_num_computers_infected:.4f}")
+
+if __name__ == "__main__":
+    simulate_virus_spread()
+        </code></pre>
+          </li>
+        </ul>
+      </details>
+    </div>
+
+
+    <!-- Shell Script Skill Card -->
+    <div class="skill-card">
+      <h3>Shell Scripting</h3>
+      <p>Experience in automating text processing tasks, utilizing system commands, and applying file transformations with sed, grep, and diff.</p>
+      <details>
+        <summary>View Example Script</summary>
+        <ul>
+          <li>
+            <strong>Text Processing & System Utilities Script:</strong> Demonstrates search and replace operations using sed, file comparison with cmp and diff, and various system commands to gather directory information.
+            <pre><code>
+#!/bin/bash
+
+# Lab 12 Shell Script
+
+# 1. Substitute the first occurrence of " he" with " HE" in each line
+echo "1. Substituting the first occurrence of ' he' with ' HE' in each line:"
+sed 's/ he/ HE/' < aminegg.txt
+echo
+
+# 2. Substitute all occurrences of " he" with " HE" in each line
+echo "2. Substituting all occurrences of ' he' with ' HE' in each line:"
+sed 's/ he/ HE/g' < aminegg.txt
+echo
+
+# 3. Add "AAA" to the beginning of each line
+echo "3. Adding 'AAA' to the beginning of each line:"
+sed 's/^/AAA/' < aminegg.txt
+echo
+
+# 4. Add "ZZZ" to the end of each line
+echo "4. Adding 'ZZZ' to the end of each line:"
+sed 's/$/ZZZ/' < aminegg.txt
+echo
+
+# 5. Add "START" to the beginning and "EOL" to the end of each line
+echo "5. Adding 'START' to the beginning and 'EOL' to the end of each line:"
+sed 's/^/START/' aminegg.txt | sed 's/$/EOL/'
+echo
+
+# 6. Exclude lines containing 'STARTEOL' using grep -v
+echo "6. Excluding lines containing 'STARTEOL':"
+sed 's/^/START/' aminegg.txt | sed 's/$/EOL/' | grep -v STARTEOL
+echo
+
+# 7. Save the result to 'nseyum1_aminegg.txt'
+echo "7. Saving the result to 'nseyum1_aminegg.txt':"
+sed 's/^/START/' aminegg.txt | sed 's/$/EOL/' | grep -v STARTEOL > nseyum1_aminegg.txt
+echo "File 'nseyum1_aminegg.txt' created."
+echo
+
+# 8. Compare 'aminegg.txt' and 'nseyum1_aminegg.txt' using cmp
+echo "8. Comparing 'aminegg.txt' and 'nseyum1_aminegg.txt' using cmp:"
+cmp aminegg.txt nseyum1_aminegg.txt
+echo
+
+# Explanation of cmp
+echo "Explanation of cmp:"
+echo "The 'cmp' command compares two files byte by byte and reports the first difference it finds."
+echo "If there are differences, it outputs the byte and line number of the first difference."
+echo "Options like '-l' list all differing bytes, and '-s' suppresses output."
+echo
+
+# 9. Compare 'aminegg.txt' and 'nseyum1_aminegg.txt' using diff
+echo "9. Comparing 'aminegg.txt' and 'nseyum1_aminegg.txt' using diff:"
+diff aminegg.txt nseyum1_aminegg.txt
+echo
+
+# 10. Remove 'START' and 'EOL' from each line
+echo "10. Removing 'START' and 'EOL' from each line, and displaying the result without blank lines:"
+sed 's/^START//'nseyum1_aminegg.txt | sed 's/EOL$//' | grep -v '^$'
+echo
+
+# 11. Overwrite 'nseyum1_aminegg.txt' with the cleaned content
+echo "11. Overwriting 'nseyum1_aminegg.txt' with the cleaned content:"
+sed 's/^START//' nseyum1_aminegg.txt | sed 's/EOL$//' > nseyum1_aminegg.txt
+echo "File 'nseyum1_aminegg.txt' updated."
+echo
+
+# 12. Compare the original and modified files using diff
+echo "12. Comparing 'aminegg.txt' and 'nseyum1_aminegg.txt' after cleaning, using diff:"
+diff aminegg.txt nseyum1_aminegg.txt
+echo
+
+# Part 2: System Commands
+
+# 1. Print the current date and time
+echo "1. Current date and time:"
+date
+echo
+
+# 2. Count the total number of files in the current working directory
+echo "2. Total number of files in the current working directory:"
+ls -1 | wc -l
+echo
+
+# 3. Print the working directory path
+echo "3. Current working directory path:"
+pwd
+echo
+
+# 4. List all files in the current directory
+echo "4. Listing all files in the current directory:"
+ls -la
+echo
+        </code></pre>
+          </li>
+        </ul>
+      </details>
+    </div>
+
+
+    <!-- C Skill Card -->
+  <div class="skill-card">
+    <h3>C Programming</h3>
+    <p>Solid understanding of pointers, memory management, and low-level programming.</p>
+    <details>
+      <summary>View Projects & Code Snippets</summary>
+      <ul>
+        <li>
+          <strong>String Manipulation Utilities:</strong> Implemented custom `strcat`, `strlen`, and `strcpy` functions.
+          <pre><code>
+#include <stdio.h>
+
+size_t my_strlen(const char *str) {
+    size_t len = 0;
+    while (*str++) len++;
+    return len;
+}
+        </code></pre>
+        </li>
+        <li>
+          <strong>Complex Tournament Simulation Program:</strong> A larger C program showcasing inter-process communication using pipes, process forking, string manipulation, and strategy-based decision-making in a tournament setting.
+          <pre><code>
+#include <stdio.h> // standard input/output library.
+#include <string.h> // string functions.
+#include <unistd.h> // POSIX I/O, pipe, fork.
+#include <sys/types.h> // system data types (pid_t).
+#include <sys/wait.h> // wait functions.
+#include <stdlib.h> // general utilities (strtol, srand, rand).
+#include <ctype.h> // character classification and conversion.
+#include <time.h> // time functions (time)
+
+#define DEBUG 0 // debug flag.
+
+void debug_print(const char *who, const char *msg) {
+    if (DEBUG) {
+        fprintf(stderr, "[%s] %s\n", who, msg);
+    }
+}
+
+void print_help(void) {
+    printf("Usage: ./TOURNAMENT [number_of_rounds] [firstname] [lastname]\n");
+    printf("Or:    ./TOURNAMENT -h\n");
+}
+
+char strategy_type(char c) {
+    c = toupper((unsigned char)c);
+    if (c >= 'A' && c <= 'D') return 'A';
+    if (c >= 'E' && c <= 'K') return 'E';
+    if (c >= 'L' && c <= 'O') return 'L';
+    if (c >= 'P' && c <= 'R') return 'P';
+    if (c >= 'S' && c <= 'T') return 'S';
+    if (c >= 'U' && c <= 'Y') return 'U';
+    if (c == 'Z') return 'Z';
+    return 'A';
+}
+
+char decode_opponent_move(char my_move, char score_char) {
+    int score = score_char - '0';
+    if (my_move == 'C') {
+        if (score == 3) return 'C';
+        else return 'D';
+    } else {
+        if (score == 5) return 'C';
+        else return 'D';
+    }
+}
+
+char decide_move(char strategy, int first_round, char last_my_move, char last_opp_move, char opp_history[], int round_count, double p) {
+    switch(strategy) {
+        case 'A':
+            return 'C';
+        case 'E':
+            return 'D';
+        case 'L':
+            return (rand()%2 == 0) ? 'C' : 'D';
+        case 'P': {
+            double r = (double)rand()/(double)RAND_MAX;
+            return (r < p) ? 'C' : 'D';
+        }
+        case 'S':
+            if (first_round) return 'C';
+            return last_opp_move;
+        case 'U':
+            if (round_count < 2) {
+                return 'C';
+            } else {
+                int len = round_count;
+                if (opp_history[len-1] == 'D' && opp_history[len-2] == 'D')
+                    return 'D';
+                else
+                    return 'C';
+            }
+        case 'Z':
+            return 'C';
+        default:
+            return 'C';
+    }
+}
+
+void parentProcess(int rounds, int p1_out[2], int p1_in[2], int p2_out[2], int p2_in[2]) {
+    char buf1[2], buf2[2];
+    int score1 = 0;
+    int score2 = 0;
+    write(p1_in[1], "R", 1);
+    write(p2_in[1], "R", 1);
+    read(p1_out[0], buf1, 1);
+    read(p2_out[0], buf2, 1);
+    int round;
+    for (round = 1; round <= rounds; round++) {
+        write(p1_in[1], "P", 1);
+        write(p2_in[1], "P", 1);
+        read(p1_out[0], buf1, 1);
+        read(p2_out[0], buf2, 1);
+        char move1 = buf1[0];
+        char move2 = buf2[0];
+        int rscore1 = 0, rscore2 = 0;
+        if (move1 == 'C' && move2 == 'C') {rscore1=3; rscore2=3;}
+        else if (move1 == 'C' && move2 == 'D') {rscore1=0; rscore2=5;}
+        else if (move1 == 'D' && move2 == 'C') {rscore1=5; rscore2=0;}
+        else {rscore1=1; rscore2=1;}
+        score1 += rscore1;
+        score2 += rscore2;
+        char out1, out2;
+        if (rscore1 == 0) out1='0'; else if (rscore1 ==1) out1='1'; else if (rscore1==3) out1='3'; else out1='5';
+        if (rscore2 == 0) out2='0'; else if (rscore2 ==1) out2='1'; else if (rscore2==3) out2='3'; else out2='5';
+        write(p1_in[1], &out1, 1);
+        write(p2_in[1], &out2, 1);
+        printf("Round %d: player 1 %c, player 2 %c. Player 1 scores %d, player 2 scores %d.\n",
+               round, move1, move2, rscore1, rscore2);
+    }
+    write(p1_in[1], "Q", 1);
+    write(p2_in[1], "Q", 1);
+    double avg1 = (double)score1 / rounds;
+    double avg2 = (double)score2 / rounds;
+    printf("Final scores: Player 1 = %d, Player 2 = %d.\n", score1, score2);
+    printf("Average score per round: Player 1 = %.2f, Player 2 = %.2f\n", avg1, avg2);
+}
+
+void playerProcess(int p_out[2], int p_in[2], char strategy) {
+    close(p_out[0]);
+    close(p_in[1]);
+    srand(time(NULL) ^ getpid());
+    char cmd;
+    int round_count = 0;
+    char opp_history[1000];
+    char my_history[1000];
+    char last_my_move = 'C';
+    char last_opp_move = 'C';
+    int first_round = 1;
+    double p = 0.7;
+    while (read(p_in[0], &cmd, 1) == 1) {
+        if (cmd == 'R') {
+            write(p_out[1], "Y", 1);
+        } else if (cmd == 'P') {
+            char my_move = decide_move(strategy, first_round, last_my_move, last_opp_move, opp_history, round_count, p);
+            write(p_out[1], &my_move, 1);
+            my_history[round_count] = my_move;
+            last_my_move = my_move;
+            first_round = 0;
+        } else if (cmd == '0' || cmd == '1' || cmd == '3' || cmd == '5') {
+            char opp_move = decode_opponent_move(last_my_move, cmd);
+            opp_history[round_count] = opp_move;
+            round_count++;
+            last_opp_move = opp_move;
+        } else if (cmd == 'Q') {
+            break;
+        }
+    }
+    close(p_out[1]);
+    close(p_in[0]);
+}
+
+int main(int argc, char *argv[]) {
+    if (argc == 2 && strcmp(argv[1], "-h") == 0) {
+        print_help();
+        return 0;
+    }
+    char firstname[50] = "S";
+    char lastname[50] = "N";
+    if (argc < 2) {
+        print_help();
+        return 0;
+    }
+    char *endptr;
+    long val = strtol(argv[1], &endptr, 10);
+    if (*endptr != '\0' || val <= 0) {
+        fprintf(stderr, "Invalid number of rounds: %s\n", argv[1]);
+        print_help();
+        return 0;
+    }
+    int rounds = (int)val;
+    if (argc >= 3) {
+        strncpy(firstname, argv[2], 49);
+        firstname[49]='\0';
+    }
+    if (argc >= 4) {
+        strncpy(lastname, argv[3], 49);
+        lastname[49]='\0';
+    }
+    char p1_strategy = strategy_type(firstname[0]);
+    char p2_strategy = strategy_type(lastname[0]);
+    int p1_out[2], p1_in[2], p2_out[2], p2_in[2];
+    if (pipe(p1_out)==-1||pipe(p1_in)==-1||pipe(p2_out)==-1||pipe(p2_in)==-1) {
+        perror("pipe");
+        exit(1);
+    }
+    pid_t pid1 = fork();
+    if (pid1<0) {
+        perror("fork");
+        exit(1);
+    }
+    if (pid1==0) {
+        close(p1_out[0]);
+        close(p1_in[1]);
+        close(p2_out[0]); close(p2_out[1]);
+        close(p2_in[0]); close(p2_in[1]);
+        playerProcess(p1_out, p1_in, p1_strategy);
+        exit(0);
+    }
+    pid_t pid2 = fork();
+    if (pid2<0) {
+        perror("fork");
+        exit(1);
+    }
+    if (pid2==0) {
+        close(p2_out[0]);
+        close(p2_in[1]);
+        close(p1_out[0]); close(p1_out[1]);
+        close(p1_in[0]); close(p1_in[1]);
+        playerProcess(p2_out, p2_in, p2_strategy);
+        exit(0);
+    }
+    close(p1_out[1]);
+    close(p1_in[0]);
+    close(p2_out[1]);
+    close(p2_in[0]);
+    parentProcess(rounds,p1_out,p1_in,p2_out,p2_in);
+    wait(NULL);
+    wait(NULL);
+    return 0;
+}
+            </code></pre>
+          </li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+
+    <!-- Example Existing Project -->
+    <div class="project-card">
+      <img src="images/project1.png" alt="Project 1">
+      <div class="project-info">
+        <h3>Project One</h3>
+        <p>An exploration of clean software architecture principles, efficient search algorithms, and file I/O handling.</p>
+      </div>
+    </div>
+
+    <!-- Software Development Final Project -->
+    <div class="project-card">
+      <img src="images/final_project.png" alt="Software Development Final Project">
+      <div class="project-info">
+        <h3>Software Development Final Project</h3>
+        <p>
+          This project focused on delivering a minimal working UX for a basic employee management system for “Company 2.”
+          Our team implemented functionalities including:
+        </p>
+        <ul>
+          <li>Displaying full-time employee information along with pay statement history.</li>
+          <li>Generating total monthly pay reports filtered by job title and division.</li>
+          <li>Search, insert, and update employee data within the system’s database.</li>
+          <li>Adjusting employee salaries based on defined salary ranges and percentage increases.</li>
+        </ul>
+        <p>
+          We followed Agile methodologies, utilized UML diagrams (use case, class, and sequence diagrams) for design clarity,
+          and developed test cases to ensure data integrity and system reliability. The deliverables included detailed
+          documentation, a working prototype (JavaFX or console-based), and a recorded video demonstration.
+        </p>
+
+
+        <!-- Video Section: YouTube Embeded -->
+        <div class="video-wrapper" style="position: relative; width: 400px; height: 225px; margin: 0 auto;">
+          <iframe
+            src="https://www.youtube.com/embed/HGNCD1Zd6EM"
+            title="Final Project Demo"
+            frameborder="0"
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%;">
+          </iframe>
+        </div>
+
+
+
+
+        </video>
+        -->
+
+        <!-- Documentation Links -->
+        <p>For more details, view the project documentation and deliverables:</p>
+        <a href="docs/SOFTWARE_DEVELOPMENT%20_FINAL_PROJECT.pdf" target="_blank" class="btn project-btn" style="margin-bottom: 1rem;">View Documentation (PDF)</a>
+        <br>
+        <!-- Single link to the code directory -->
+        <a href="code/" class="btn project-btn" style="margin-bottom: 1rem;">View Java Code</a>
+      </div>
+    </div>
+    <!-- Pending Project: Mobile App (Project Two) -->
+    <div class="project-card">
+      <img src="images/mobile_app_placeholder.png" alt="Mobile App Project (In Progress)">
+      <div class="project-info">
+        <h3>Project Two (In Progress)</h3>
+        <p>
+          Currently developing a mobile application aimed at improving user productivity. The app will leverage
+          platform-native features, offer intuitive UI/UX, and incorporate backend services to store and sync user data.
+        </p>
+        <p>
+          Key technologies: Java/Kotlin (Android), RESTful APIs, and Firebase for authentication and data storage.
+        </p>
+        <p>
+          This project is still under development and will be updated with code samples, screenshots, and documentation as it progresses.
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="section contact-section">
+  <h2>Contact</h2>
+  <p>If you’d like to get in touch regarding internship opportunities or collaboration, feel free to reach out!</p>
+  <div class="contact-details">
+    <p>Email: <a href="mailto:nseyum1@student.gsu.edu">nseyum1@student.gsu.edu</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/naol-seyum" target="_blank">Naol Seyum</a></p>
+    <p>GitHub: <a href="https://github.com/nseyum1" target="_blank">@nseyum1</a></p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 Naol Seyum. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
